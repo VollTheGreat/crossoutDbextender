@@ -19,9 +19,11 @@ class CrossoutDbManager
         'Weapons' => 1,
         'Cabins' => 1,
         'Hardware' => 1,
-        'Movement' => 1];
+        'Movement' => 1
+    ];
+
     const CRAFT_RESOURCES_IDS = [
-        57,53,43,76,85,216
+        57,53,43,76,85,216,785,786
     ];
 
     /**

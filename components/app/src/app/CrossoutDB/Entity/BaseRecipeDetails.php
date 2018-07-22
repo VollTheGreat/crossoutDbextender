@@ -19,11 +19,17 @@ class BaseRecipeDetails
     protected $wiresId = 216;
     protected $wiresCountIndex = 10;
 
+    protected $largePlasticId = 786;
+    protected $largePlasticCountIndex = 100;
+    protected $plasticId = 785;
+    protected $plasticCountIndex = 100;
+
     protected $resources;
     protected $workbenchPrice;
     protected $metalResourceRequest;
     protected $cooperResourceRequest;
     protected $wiresResourceRequest;
+    protected $plasticResourceRequest;
 
     /**
      * @param array $resources
@@ -40,7 +46,8 @@ class BaseRecipeDetails
     {
         return $this->metalResourceRequest / $this->metalCountIndex * $this->resources[$this->metalId]['formatBuyPrice']
             + $this->cooperResourceRequest / $this->largeCooperCountIndex * $this->resources[$this->largeCooperId]['formatBuyPrice']
-            + $this->wiresResourceRequest / $this->wiresCountIndex * $this->resources[$this->wiresId]['formatBuyPrice'];
+            + $this->wiresResourceRequest / $this->largeWiresCountIndex * $this->resources[$this->largeWiresId]['formatBuyPrice']
+            + $this->plasticResourceRequest / $this->largePlasticCountIndex * $this->resources[$this->largePlasticId]['formatBuyPrice'];
     }
 
     /**

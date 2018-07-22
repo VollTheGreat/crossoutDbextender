@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Барыги Crossout</title>
+<title>Crossout Bargers</title>
 <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
 
