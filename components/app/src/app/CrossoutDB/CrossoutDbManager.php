@@ -149,7 +149,7 @@ class CrossoutDbManager
             }
         }
 
-        return $ingredients['totalBuyPrice'];
+        return formatFloat($ingredients['totalBuyPrice']);
     }
 
     /**

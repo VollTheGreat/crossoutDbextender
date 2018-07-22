@@ -47,7 +47,7 @@ class BaseRecipeDetails
         return $this->metalResourceRequest / $this->metalCountIndex * $this->resources[$this->metalId]['formatBuyPrice']
             + $this->cooperResourceRequest / $this->largeCooperCountIndex * $this->resources[$this->largeCooperId]['formatBuyPrice']
             + $this->wiresResourceRequest / $this->largeWiresCountIndex * $this->resources[$this->largeWiresId]['formatBuyPrice']
-            + $this->plasticResourceRequest / $this->largePlasticCountIndex * $this->resources[$this->largePlasticId]['formatBuyPrice'];
+            + $this->plasticResourceRequest / $this->plasticCountIndex * $this->resources[$this->plasticId]['formatBuyPrice'];
     }
 
     /**

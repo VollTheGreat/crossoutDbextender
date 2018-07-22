@@ -9,6 +9,6 @@ if (!function_exists('format_float')){
      */
     function formatFloat($item)
     {
-        return round((float)$item, 2);
+        return round( (float) $item, 2);
     }
 }
