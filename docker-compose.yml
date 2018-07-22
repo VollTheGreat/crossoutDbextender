@@ -1,0 +1,45 @@
+version: "3.5"
+
+volumes:
+  dbdata: {}
+
+services:
+  app:
+    build:
+      context: ./components/app
+      dockerfile: develop/Dockerfile
+      args:
+        - XDEBUG_PORT=${XDEBUG_PORT:-172.18.0.1}
+    volumes:
+      - ./components/app/src:/var/www
+    depends_on:
+      - db
+
+  server:
+    build:
+      context: ./components/server
+      dockerfile: develop/Dockerfile
+    env_file: ./config/local/server.env
+    volumes:
+      - ./components/app/src:/var/www
+    ports:
+      - 80:80
+    depends_on:
+      - app
+
+  db:
+    image: mysql:5.7.19
+    env_file: ./config/local/db.env
+    volumes:
+      - dbdata:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+  test:
+    build:
+      context: ./components/app
+      dockerfile: develop/tests.Dockerfile
+      args:
+        - XDEBUG_PORT=${XDEBUG_PORT:-172.18.0.1}
+    volumes:
+      - ./components/app/src:/var/www
