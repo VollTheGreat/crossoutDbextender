@@ -5,7 +5,6 @@
 <title>Crossout Bargers</title>
 <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
     <div id="wrapper">
         <header>
@@ -22,6 +21,8 @@
                 </select>
             </label>
             <label>Workbench price:<input id="workbench-price" type="number" min="0"></label>
+            <a href="/?Rares" style="margin-left:20px;color: hsla(43, 29%, 71%, 1)">Rares</a>
+            <a href="/" style="margin-left:20px;color: hsla(43, 29%, 71%, 1)">Epics</a>
         </header>
         <main>
             <hr>
