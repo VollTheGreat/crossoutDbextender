@@ -21,8 +21,10 @@
                 </select>
             </label>
             <label>Workbench price:<input id="workbench-price" type="number" min="0"></label>
-            <a href="/?Rares" style="margin-left:20px;color: hsla(43, 29%, 71%, 1)">Rares</a>
-            <a href="/" style="margin-left:20px;color: hsla(43, 29%, 71%, 1)">Epics</a>
+            <a href="/?Rares" style="margin-left:20px;color: hsla(43, 29%, 71%, 1)">JS View Rares</a>
+            <a href="/" style="margin-left:20px;color: hsla(43, 29%, 71%, 1)">JS View Epics</a>
+            <a href="/dashboard/rares" style="margin-left:20px;color: hsla(43, 29%, 71%, 1)">Dashboard Epics</a>
+            <a href="/dashboard/epics" style="margin-left:20px;color: hsla(43, 29%, 71%, 1)">Dashboard Epics</a>
         </header>
         <main>
             <hr>

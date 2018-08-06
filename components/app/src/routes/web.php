@@ -15,3 +15,4 @@ Route::get('/', 'MainController@index');
 Route::get('/api/stats', 'MainController@stats');
 Route::get('/api/rares', 'MainController@rares');
 Route::get('/api/epics', 'MainController@epics');
+Route::get('/dashboard/{RarityType}', 'MainController@dashboard');

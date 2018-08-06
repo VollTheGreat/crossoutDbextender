@@ -58,4 +58,23 @@ class MainController extends Controller
     {
         return $this->crossoutDbManager->getFormattedData('Rare', 'Common');
     }
+
+    /**
+     * GET /api/stats
+     *
+     * @return array
+     */
+    public function dashboard($type)
+    {
+        switch ($type){
+            case'rares':
+                return view('dashboard',[
+                    'data' => $this->crossoutDbManager->getFormattedData('Rare', 'Common')
+                ]);
+            case'epics':
+                return view('dashboard',[
+                    'data' => $this->crossoutDbManager->getFormattedData('Epic', 'Rare')
+                ]);
+        }
+    }
 }
